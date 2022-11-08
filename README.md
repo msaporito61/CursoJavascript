@@ -992,4 +992,424 @@ function raizCuadrada(num) {
 	return Math.sqrt(num);
 }
 ```
+### Crear objetos
+
+```javascript
+var miPerro = {
+	nombre: "Firulais",
+	edad: 5,
+	peso: 6,
+	raza: "Dogo"
+};
+
+```
+### Acceder a propiedades: notación de punto
+
+```javascript
+var miPerro = {
+	nombre: "Firulais",
+	edad: 5,
+	peso: 6,
+	raza: "Dogo"
+};
+
+console.log(miPerro.nombre);
+```
+### Acceder a propiedades: notación de corchetes
+
+```javascript
+var miCuaderno = {
+	"color": "verde",
+	"categoria": 3,
+	"numero de paginas": 200,
+	"numero de hojas": 100
+}
+
+console.log(miCuaderno["numero de paginas"]
+```
+### Acceder a propiedades: variables 
+
+```javascript
+var resultados = {
+	1: "lucho256",
+	2: "juan577",
+	3: "estef543",
+	4: "kiara566"
+};
+
+var posicion = 4;
+
+console.log(resultados[posicion]);
+
+```
+### Actualizar propiedades 
+
+```javascript
+var mochila = {
+	"color": "azul",
+	"tamaño": "mediano",
+	"contenido": ["botella de agua", "cuaderno"]
+};
+
+console.log(mochila.color); //azul
+mochila.color = "verde"
+console.log(mochila.color); //verde
+console.log(mochila.contenido);
+mochila.contenido.push("lapiz");
+```
+### Agregar propiedades 
+
+```javascript
+
+var curso = {
+	titulo: "Apende Javascript desde Cero",
+	idioma: "Español",
+	duracion: 30
+};
+
+curso.vistas = 34500;
+
+console.log(curso.vistas);
+
+```
+### Eliminar propiedades 
+
+```javascript
+var curso = {
+	titulo: "Apende Javascript desde Cero",
+	idioma: "Español",
+	duracion: 30
+};
+
+delete curso.duracion;
+
+```
+### Objetos para búsquedas 
+
+```javascript
+function buscarElementoQuimico(simbolo) {
+	var elementoQuimico = "";
+	var simbolosQuimicos = {
+		Al: "Aluminio",
+		S: "Azufre",
+		Cl: "Cloro",
+		He: "Helio",
+		B: "Boro",
+		Li: "Litio" 
+	};
+	
+	return simbolosQuimicos[simbolo];
+	
+	console.log(buscarElementosQuimico("Al");
+	
+	/*
+	switch (simbolo) {
+		case "Al":
+			elementoQuimico = "Aluminio";
+			break;
+		case "S"
+			elementoQuimico = "Azufre";
+			break;
+		case "Cl":
+			elementoOuimico = "Cloro";
+			break;
+		case "He":
+			elementoOuimico = "Helio";
+			break;
+		case "B":
+			elementoOuimico = "Boro";
+			break;
+	}
+	*/
+```
+### Verificar propiedades 
+
+```javascript
+var miCuaderno = {
+	color: "verde",
+	categoria: 3,
+	precio: 4.56
+};
+
+miCuaderno.hasOwnProperty("color")); // true
+
+
+function verficarPropiedad(obj, propiedad) {
+	if (obj.hasOwnProperty(propiedad)) {
+		return "Propiedad: " + obj[propiedad];
+	} else {
+		return "El objeto no tiene esta propiedad.";
+	}
+}
+
+console.log(verificarPropiedad(miCuaderno, "color")); // Propiedad: verde
+```
+### Objetos complejos
+
+```javascript
+var ordenesDePizzas = [
+	{
+		tipo: "margarita",
+		tamaño: "individual",
+		precio: 5.67,
+		toppings: [
+			"extra queso",
+			"champiñones",
+			"piña"
+		],
+		paraLlevar: true
+	},
+	{
+		tipo: "cuatro quesos",
+		tamaño: "familiar",
+		precio: 18.34,
+		toppings: [
+			"extra queso",
+			"pimentón"
+		],
+		paraLlevar: false
+	},
+	{
+		tipo: "napolitana",
+		tamaño: "individual",
+		precio: 6.78,
+		toppings: [],
+		paraLlevar: true
+	}
+];
+
+console.log(ordenesDePizzas[0]);
+console.log(ordenesDePizzas[1]);
+
+console.log(ordenesDePizzas[0].tipo); // margarita
+console.log(ordenesDePizzas[0]["precio"]); // 5.67
+console.log(ordenesDePizzas[0].toppings);
+
+console.log(ordenesDePizzas);
+
+```
+### Objetos anidados
+
+```javascript
+var miReceta = {
+	"descripcion": "mi postre favorito"
+	"costo": 15.6,
+	"ingredientes": {
+		"masa": {
+			"harina": "100 grs",
+			"sal": "1 cucharadita",
+			"agua": "1 taza" 
+		},
+		"cobertura": {
+			"azucar": "120 grs",
+			"chocolate": "4 cucharadas"
+			"mantequilla": "200 grs"
+		}
+	}
+};
+
+console.log(miReceta.descripcion);
+console.log(miReceta.costo);
+console.log(miReceta.ingredientes);
+console.log(miReceta.ingredientes.masa);
+```
+### Arreglos anidados
+
+```javascript
+var misPlantas = [
+	{
+		tipo: "flores",
+		lista: [
+			"rosas",
+			"tulipanes",
+			"dientes de léon"
+		]
+	},
+	{
+		tipo: "árboles",
+		lista: [
+			"abeto",
+			"pino",
+			"abedul"
+		]
+	}
+];
+
+var primeraFlor = misPlantas[0].lista[0];
+console.log(primeraFlor);
+
+var segundoArbol = misplantas[1].lista[1];
+console.log(segundoArbol);
+```
+### Bucle *while*
+
+```javascript
+
+var i = 0;
+
+while (i <= 3 ) {
+	console.log("hola, bucle!";
+	i++;
+}
+
+var miArreglo = [];
+var i = 0;
+
+console.log(miArreglo);
+
+while (i < 10) {
+	miArreglo.push(i);
+	i++;
+}
+
+console.log(miArreglo);
+
+var numeros = [2, 3, 4, 5, 6, 8, 9, 57];
+
+while (numeros.length > 4) {
+	numeros.pop();
+}
+
+console.log(numeros);
+
+
+```
+### Bucle *for*
+
+```javascript
+var miArreglo = [];
+
+for (var i=0; i < 10; i++) {
+	miArreglo.push(i)
+}
+
+console.log(miArreglo);
+
+for (var i=0; i < 10; i += 2) {
+	miArreglo.push(i)
+}
+
+console.log(miArreglo);
+
+
+
+```
+### Bucle *for* 
+#### ejemplo: números impares
+
+```javascript
+var miArreglo = [];
+
+for (var i=0; i < 20; i += 2) {
+	miArreglo.push(i)
+}
+
+console.log(miArreglo);
+
+```
+### Bucle *for*
+#### Ejemplo: cuenta regresiva 
+
+```javascript
+var miArreglo = [];
+
+for (var i=15; i >= 10; i--) {
+	miArreglo.push(i)
+}
+
+console.log(miArreglo);
+
+```
+### Iterar sobre un arreglo con un bucle *for* 
+
+```javascript
+var miArreglo = [4, 6, 8, 2];
+var total = 0;
+
+for (var i = 0; i < miArreglo.length; i++) {
+	total += miArreglo[i];
+}
+
+console.log(total);
+
+var lenguajes = ["JavaScript", "Python", "Java", "C++"];
+for (var i = 0; i < lenguajes.length;) {
+	console.log(lenguajes[i].toUpperCase());
+}
+
+
+function contaNumerosPares(arreglo) {
+	var total = 0;
+	for (var i = 0; i < arreglo.length; i++) {
+		total++
+	}
+}
+
+console.log(contarNumerosPares([5, 3, 1, 2, 4, 8])); // 3
+
+```
+### Bucless *for* anidados 
+
+```javascript
+var miArreglo = [[1, 2, 3],[4, 5, 6],[7, 8, 9]];
+
+for (var i = 0; i < miArreglo.length; i++) {
+	var arregloAnidado = miArreglo[i];
+	for (var j = 0; j < arregloAnidado.length; j++) {
+		console.log(arregloAnidado[j];
+	}
+}
+
+
+
+```
+### Bucles *do...while*
+
+```javascript
+var x;
+x = 5;
+
+do {
+	console.log(x);
+	x++;
+} while (x < 10);
+
+```
+### Búsqueda de Perfil
+
+```javascript
+
+var contactos = [
+	{
+		"nombre": "Julian"
+		"apellido": "Perez"
+		"numero": "0543236543"
+		"gustos": ["Pizza", , "Programación"1
+	},
+	{
+		"nombre": "Harry"
+		"apellido": "Potter"
+		"numero": "0994372684"
+		"gustos": ["Hogwarts", "Magia"]
+	},
+	{
+		"nombre": "Sherlock".
+		"apellido": "Holmes"
+		"numero": "0487345643",
+		"gustos": ["Casos interesantes". "Violín"
+	}
+];
+
+function buscarPerfil(nombre, propiedad) {
+	for(var i = 0; i < contactos.length; i++) {
+		if (contactos[i].nombre === nombre) {
+			return contactos[i][propiedad] || "La propiedad no existe."
+		}
+	}
+	return "El contacto no esta en la lista."
+}
+
+console.log(buscarPerfil("Harry", "gustos");
+
+```
 
