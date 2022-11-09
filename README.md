@@ -1412,4 +1412,431 @@ function buscarPerfil(nombre, propiedad) {
 console.log(buscarPerfil("Harry", "gustos");
 
 ```
+### Números aleatorios
+
+```javascript
+function generarFraccionAleatoria() {
+	return Math.random(); // [0, 1)
+}
+
+console.log(generarFraccionalAleatoria());
+
+var numeroAleatorio = Math.random();
+
+
+```
+### Números enteros aleatorios 
+
+```javascript
+
+var numeroAleatorioEntre0y49 = Math.floor(Math.random() * 50);
+
+console.log(numeroAleatorioEntre0y19)
+
+function generarEnteroAleatorio(limiteSuperior) {
+	Math.floor(Math.random() * limiteSuperior);
+}
+
+for (var i = 0; i < 15; i++) {
+	console.log(generarEnteroAleatorio(5)
+}
+
+```
+### Números enteros aleatorios en un rango 
+
+```javascript
+
+function rangoAleatorio(limiteInferior, limiteSuperior) {
+	return Math.floor(Math.random() * (limiteSuperior - limiteInferior + 1)) + limiteInferior;
+}
+
+console.log(rangoAleatorio(3, 8));
+```
+### Función *parseInt()*
+
+```javascript
+console.log(parseInt("5") // 5
+
+console.log(parseInt("abc")); // NaN
+
+```
+### Función *parseInt()* con una base 
+
+```javascript
+console.log(parseInt("110111", 2)); // 55
+
+console.log(parseInt("3E0A", 2)); // 15882
+
+```
+### Operador condicional (ternario) 
+
+```javascript
+
+function retornarMinimo(x, y) {
+	if (x < y) {
+		return x;
+	} else {
+		return y;
+	}
+}
+
+function retornarMinimo(x, y) {
+	return x < y ? x : y;
+}
+
+retornarMinimo(4, 7);
+
+var a = 5;
+var b = 9;
+
+console.log(a > b ? a + 2 : b * 3)
+
+```
+### Múltiples operadores condicionales 
+
+```javascript
+
+function compararNumeros(a, b) {
+	if (a == b) {
+		return "a y b son iguales";
+	} else if (a > b) {
+		return "a es mayor que b";
+	} else {
+		return "b es mayor que a";
+	}
+}
+
+function compararNumeros(a, b) {
+	return a == b ? "a y b son iguales" 
+		: a > b ? "a es mayor que b"
+		: "b es mayor que a"; 
+}
+
+```
+### *var* vs. *let* 
+
+```javascript
+var empleado = "Juan"
+var empleado = "Pedro" // se puede
+
+let empleado = "Juan"
+let empleado = "Pedro" // no se puede
+
+let empleado = "Juan"
+empleado = "Pedro" // se puede
+
+```
+### Ámbito de *var* vs. *let* 
+
+```javascript
+
+var miVariableGlobal = 4;
+
+```
+### *const* en JavaScript
+
+```javascript
+
+function calcularAreaCirculo(radio) {
+	const PI = 3.14;
+	if (radio < 0) {
+		return undefined;
+	}
+	
+	return PI * (radio ** 2);
+}
+
+console.log(calcularAreaCirculo(10));
+
+
+```
+### Mutar un arreglo declarado con *const* 
+
+```javascript
+
+const MI_ARREGLO = [1, 2, 3, 4];
+
+MI_ARREGLO[0] = 5;
+MI_ARREGLO[1] = 6;
+MI_ARREGLO[2] = 7;
+MI_ARREGLO[3] = 8;
+
+console.log(MI_ARREGLO); // [5, 6, 7, 8]
+
+```
+### Crear un objeto immutable
+
+```javascript
+
+let colores = {
+	"verde": "#10e04b",
+	"azul": "#1b50e0",
+	"negro": "#000000",
+	"blanco": "#ffffff"
+};
+
+Object.freeze(colores);
+
+colores.amarillo = "#fff200"; // error
+
+```
+### Funciones flecha
+
+```javascript
+
+const fecha = function() {
+	return new Date();
+};
+
+const fecha = () => new Date();
+
+```
+### Funciones flecha con parámetros
+
+```javascript
+
+const sumaTres = function (x) => x + 3;
+
+console.log(sumarTres(4);
+
+const concatenar = (arr1, arr2) => arr1.concat(arr2);
+
+const sumar = (a, b) => {
+	let num = 6;
+	return a + b + num
+};
+
+
+```
+### Valores por defecto para parámetros
+
+```javascript
+const incrementar = (num, valor = 1) => num + valor;
+
+console.log(incrementar(5)); // 6
+console.log(incrementar(5, 3)); // 6
+
+```
+### Operador *rest*
+
+```javascript
+function miFuncion(...args) {
+	console.log(args);
+};
+
+miFuncion(1); // [1]
+miFuncion(1, 2 , 3, 4); // [1, 2, 3, 4]
+
+const sumar = (x, y, z) => {
+	const args = [x, y, z];
+	return args.reduce((a,b) => a + b, 0);
+};
+
+
+const sumar = (...args) => {
+	return args.reduce((a,b) => a + b, 0);
+};
+```
+### Operador *spread* 
+
+```javascript
+const numeros = [1, 2, 3];
+
+function sumar(x, y, z) {
+	return x + y + z;
+}
+
+console.log(sumar(...numeros)); // 6
+```
+### Sintaxis de desestructuración 
+
+```javascript
+const usuario = {
+	nombre = "Juan",
+	edad = 41
+}
+
+const {nombre, edad} = usuario;
+
+var coordenadas = {
+	x: 4,
+	y: 6,
+	z: 12
+}
+
+const{x, y, z} = coordenadas;
+
+console.log(x); // 4
+console.log(y); // 6
+console.log(z); // 12
+```
+### Sintaxis de desestructuración: objetos anidados
+
+```javascript
+
+const usuario = {
+	johnDoe: {
+		edad: 27,
+		correo: "johnDoe@mail.com"
+	}
+};
+
+const {jhonDoe: {edad, correo}} = usuario;
+console.log(edad); // 27
+
+const {jhonDoe: {edad: edadDelUsuario, correo: correoDelUsuario}} = usuario;
+
+const PRONOSTICO_LOCAL = {
+	ayer: {
+		minima: 18,
+		maxima: 24
+	},
+	hoy: {
+		minima: 16,
+		maxima: 25
+	},
+	mañana: {
+		minima: 17,
+		maxima: 23
+	}
+};
+
+const minimaHoy = PRONOSTICO_LOCAL.hoy.minima;
+const maximaHoy = PRONOSTICO_LOCAL.hoy.maxima;
+
+console.log(minimaHoy, maximaHoy); // 16 25
+
+const {hoy: {minima: minimaHoy, maxima: maximaHoy}} = PRONOSTICO_LOCAL;
+
+console.log(minimaHoy, maximaHoy); // 16 25
+
+```
+### Sintaxis de desestructuración: arreglos
+
+```javascript
+
+var a;
+var b;
+
+[a, b] = [1, 2]
+
+[a, b] = [1, 2, 3, 4, 5, 6];
+
+var c
+[a, b,,, c] = [1, 2, 3, 4, 5, 6];
+
+console.log(a, b, c); // 1,2,5
+
+var a = 8;
+var b = 6;
+
+[b, a] = [a, b];
+
+console.log(a, b); // 6 8
+
+```
+### Sintaxis de desestructuración con el operador *rest*
+
+```javascript
+
+ 
+var a;
+var b;
+var arr;
+
+[a, b, ...arr] = [1, 2, 3, 4, 5, 6, 7]
+
+console.log(a); // 1
+console.log(b); // 2
+console.log(arr); // [3, 4, 5, 6, 7]
+
+const arregloInicial = [1, 2, 3, 4, 5, 6, 7, 8]
+
+function removerTresPrimerosElementos(arreglo) {
+	const [ , , , ...nuevoArreglo] = arreglo
+	return nuevoArreglo;
+}
+
+const arregloFinal = removerTresPrimerosElementos(arregloInicial);
+console.log(arregloFinal); // [4, 5, 6, 7, 8]
+
+```
+### Sintaxis de desestructuración: pasar objeto como argumento
+
+```javascript
+
+var nuevoPerfilCliente = {
+	nombre: "Jane Doe",
+	edad: 24,
+	nacionalidad: "Española",
+	ubicacion: "España"
+};
+
+const actualizarPerfil = (informacionDePerfil) => {
+	const {nombre, edad, nacionalidad, ubicacion} = informacionDePerfil;
+	console.log(nombre);
+	console.log(edad);
+	console.log(nacionalidad);
+	console.log(ubicacion);
+};
+
+
+actualizarPerfil(nuevoPerfilCliente);
+
+const actualizarPerfil = ({nombre, edad, nacionalidad, ubicacion}) => {
+	console.log(nombre);
+	console.log(edad);
+	console.log(nacionalidad);
+	console.log(ubicacion);
+};
+
+actualizarPerfil(nuevoPerfilCliente);
+
+
+const estadisticas = {
+	max: 56.78,
+	desviacionEstandar: 4.34,
+	mediana: 34.54,
+	moda: 23.87,
+	min: -0.75,
+	promedio: 35.85
+};
+
+const puntoMedio = ({max, min}) => (max + min) / 2.0;
+
+console.log(puntoMedio(estadisticas)); // 28.015 
+
+```
+### Plantillas literales 
+
+#### Características
+- Se usa el acento invertido (backtick) ` en lugar de comillas.
+- Pueden contener comillas simples y dobles.
+- Las líneas se preservan como se escriben en el código.
+- Para reemplazar una variable se escribe ${variable}.
+- Dentro de ${} también puedes escribir expresiones.
+
+```javascript
+
+var a = 6;
+
+console.log(`El valor de a es ${a}`);
+
+var nombre = "Nora";
+var edad = 6;
+
+console.log(`Mi nombre es ${nombre} y tengo ${edad} años.`);
+
+var miArreglo = [1, 2, 3, 4];
+
+console.log(`El arreglo es ${JSON.stringify(miArreglo)}`);
+
+var persona = {
+	nombre: "Juan Perez",
+	edad: 23
+};
+
+const SALUDO = `Hola Mi nombre es ${persona.nombre} y tengo ${persona.edad} años`;
+
+```
 
