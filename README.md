@@ -1839,4 +1839,91 @@ var persona = {
 const SALUDO = `Hola Mi nombre es ${persona.nombre} y tengo ${persona.edad} años`;
 
 ```
+### Crear objetos de forma concisa
+
+```javascript
+
+const crearPersona = (nombre, edad, idioma) => {
+	return {
+		nombre: nombre,
+		edad: edad,
+		idioma: idioma
+	};
+}
+
+console.log(crearPersona("Jane Doe", 28, "Chilena"));
+
+const crearPersona = (nombre, edad, idioma) => ({nombre, edad, idioma});
+
+console.log(crearPersona("Jane Doe", 28, "Chilena"));
+```
+### Métodos
+
+```javascript
+
+const persona = {
+	nombre: "Jane",
+	presentarse() {
+		return `Hola mi nombre es ${this.nombre}.`;
+	}
+};
+
+persona.presentarse();
+
+```
+### Definir una clase
+
+```javascript
+
+class TransbordadorEspacial {
+	constructor(planeta){
+		this.planeta = planeta;
+	}
+}
+
+var zeus = new  TransbordadorEspacial("Júpiter");
+
+var apolo = new TransbordadorEspacial("Marte");
+
+class Mascota {
+	constructor(nombre, edad) {
+		this.nomnbre = nombre;
+		this.edad = edad;
+	}
+}
+
+var miMascota = new Mascota("Kyra", 5);
+
+console.log(miMascota.nombre);
+console.log(miMascota.edad);
+
+
+```
+### Getters y setters
+
+```javascript
+
+class Libro {
+	constructor(autor) {
+		this._autor = autor;
+	}
+	
+	get autor(){
+		return this._autor;
+	}
+	
+	set autor(nuevoAutor) {
+		this._autor = nuevoAutor;
+	}
+}
+
+const libro = new Libro("anónimo");
+console.log(libro.autor); // anónimo
+
+libro.autor = "Sarmiento";
+console.log(libro.autor); // Sarmiento
+
+```
+
+
 
