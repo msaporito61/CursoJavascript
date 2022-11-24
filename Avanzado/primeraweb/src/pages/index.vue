@@ -4,11 +4,11 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'IndexPage'
-}
+<script setup>
+import Hero from "../components/Hero.vue"
+
 </script>
 
 <style>
+
 </style>

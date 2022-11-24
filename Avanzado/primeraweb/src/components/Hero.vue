@@ -1,20 +1,21 @@
 <template>
-  <div>
-    <div class="Hero container">
-      <div class="text-container">
-        <h1 class="header">Encuentre su extintor</h1>
-        <p class="snippet">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus cupiditate rem necessitatibus
-          laboriosam tempore ipsum placeat facilis eligendi hic dolor nobis illum accusamus quos ducimus voluptatum nam
-          deserunt, reprehenderit consequatur!</p>
-        <button class="button btn">Comienze a buscar</button>
-      </div>
-      <img src="../assets/svg/fire-extinguisher.svg" alt="" class="image">
+  <div class="Hero container">
+    <div class="text-container">
+      <h1 class="header">Encuentre su extintor</h1>
+      <p class="snippet">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste iusto illum quidem asperiores, cum nisi aperiam eius ipsa sapiente odit!</p>
+      <button class="button btn">Empieza a mirar</button>
     </div>
+    <img
+      class="image"
+      src="../assets/svg/fire-extinguisher.svg"
+      alt="fire extinguisher"
+    >
   </div>
 </template>
 
 <script>
 export default {
+
 }
 </script>
 
