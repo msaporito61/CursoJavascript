@@ -11,6 +11,7 @@ const app = createApp(App)
 app.use(createStore())
 app.use(router)
 
+
 app.mount('#app')
 
 import "bootstrap/dist/js/bootstrap.js"

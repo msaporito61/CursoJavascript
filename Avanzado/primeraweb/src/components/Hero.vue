@@ -1,4 +1,6 @@
 <template>
+  <div>
+
   <div class="Hero container">
     <div class="text-container">
       <h1 class="header">Encuentre su extintor</h1>
@@ -10,6 +12,7 @@
       src="../assets/svg/fire-extinguisher.svg"
       alt="fire extinguisher"
     >
+  </div>
   </div>
 </template>
 

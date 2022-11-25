@@ -10,7 +10,6 @@ export default defineConfig({
     vue(),
     Pages({
       dirs: 'src/pages',
-      exclude: ['**/components/*.vue'],
     })
   ],
   resolve: {
