@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.css"
 import { createApp } from 'vue'
-import { createStore } from 'vuex'
+import store from './store/index'
 import App from './App.vue'
 import router from './router'
 
@@ -8,7 +8,7 @@ import router from './router'
 
 const app = createApp(App)
 
-app.use(createStore())
+app.use(store)
 app.use(router)
 
 

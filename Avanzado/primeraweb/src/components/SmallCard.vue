@@ -1,13 +1,13 @@
 <template>
-  <div>
-  <RouterLink :to="producto" class="card-container">
-    <img class="image" :src="imagen" alt="">
-  </RouterLink>
+  <div class="card-container">
+    <RouterLink :to="producto">
+      <img class="image" :src="imagen" alt="">
+    </RouterLink>
   </div>
 </template>
 
 <script>
-import { RouterLink } from 'vue-router'
+import { RouterLink} from 'vue-router'
   export default {
     props: ["card"],
     data(){
@@ -15,6 +15,9 @@ import { RouterLink } from 'vue-router'
         imagen: "",
         producto: ""
       }
+    },
+    components:{
+      RouterLink
     },
     methods: {
       combinar() {

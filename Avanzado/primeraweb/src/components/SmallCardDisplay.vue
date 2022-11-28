@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h3 class="header">{{ cardsSection.title }}</h3>
-    <div class="card-container">
+    <div class="cards-container">
         <SmallCard
           v-for="card in cardsSection.cards"
           :key="card.id"
@@ -33,7 +33,7 @@ import SmallCard from './SmallCard.vue';
   margin-bottom: 2rem;
 }
 
-.card-container {
+.cards-container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
