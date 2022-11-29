@@ -7,6 +7,7 @@
       <div class="info-box">
         <h1>{{ product.title}}</h1>
         <p class="snippet">{{ product.snippet}}</p>
+        <RentModal :product="product"/>
       </div>
     </div>
     <div class="whats-included-container">
@@ -40,6 +41,7 @@
  //import store from '../../store/index'
  import Reviews from '../../components/Reviews.vue';
  import { mapGetters } from 'vuex';
+import RentModal from '../../components/RentModal.vue';
   export default {
     data() {
       return {
@@ -48,8 +50,9 @@
       }
     },
     components:{
-      Reviews
-    },
+    Reviews,
+    RentModal
+},
     methods:{
       combinar () {
         this.imagen = "/src/assets/images/" + this.product.image
